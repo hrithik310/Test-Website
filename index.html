@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel='stylesheet' href='1st_Project_Style.css'> <!--This line is used to link external css, and stylesheet 
+                                                            ,href is used to refer css files, and rel  
+                                                            indicates that css type ka link aane vala hai.-->
+    
+</head>
+<body>
+    <!-- HEADER MODULE STARTED.-->
+
+    <header> <!--it is a semantic tag just live div tag or children of div tag, and header tag creates a section only
+                for headings.-->
+            <h1>DEV 101</h1>
+            <nav> <!--kyonki navigation links header me hai to isliye header tag me.-->
+                <ul> <!--list to hume alag alag line me deti hai elements to isse hum ek line me kese show krenge? 
+                        with help of css, style vale ko refer kro.-->
+                    <li><a href='https://en.wikipedia.org/wiki/HTML'>HTML5</a></li> <!--link or normal text me farak hota hai ki, text or list item underlined nahi hote link underlined hota hai.-->
+                    <li><a href='https://en.wikipedia.org/wiki/CSS'>CSS3</a></li>
+                    <li><a href='#third'>JavaScript</a></li> <!--is case me kya hoga bs , ki jab JavaScript pe click krnege 
+                                                                to site pe lajane ke bajaye vo ussi website me javaScript 
+                                                            vale section me le jayega and humne idhr href me uski id mention
+                                                        kardi hai., class se try kra tha but hua nahi.-->
+                </ul>
+            </nav>
+    </header>
+
+    <!--HEADER MODULE FINISHED.-->
+
+    <!--SECTION MODULE STARTED. : koi images vagera lagani ho to section tag me lagao,agr akeli image lagani ho.-->
+
+    <section>
+        <!--<img src="C:\Users\Kavya Bajaj\Desktop\fjp-3-web\28th dec(1st Project)\lap.jpeg" alt=""> ab yeh mene kya kra
+        src me lab.jpeg ka path copy paste krdiya but isse image nahi ayegi even relative path paste krne se bhi nahi
+        ayegi image uske liye .operator use krna padega.-->
+
+        <img src="./lap.jpeg" class="laptop_image" alt="laptop image"> <!--./ use krke dalna padega, and agr img hoti 28th dec vale folder ke just bahar
+        mtlb jis folder me 28th dec vali file hai vahan hoti img to hum .. 2 dot lagane padte usko access krne ke liye,
+        mtlb jitna bahar jana chahte ho utne do laga do.and agr 28dec jonse folder me hai usme ek or folder hota img 
+        naam ka and usme hoti lap.jpeg to likhte ../img/lap.jpeg and last ki agr img same folder me hi hai jese yahan 
+        jo ./lap.jpeg likha hai is case me hai to akela lap.jpeg bhi likh skte hai vo bhi kaam krega.-->
+
+
+    </section>
+
+    <!--SECTION MODULE FINISHED..-->
+
+    <!--ARTICLE MODULE. : jab koi content linkhna ho chahe image ke sath hi to article tag.
+    pargraph headings vagera isme. -->
+
+    <article>
+        <div class="container">  <!--sbko container naam isliye diya kyonki sbki styling same hi hai, and id isliye nahi di, styling ke liye hmesha class use krni chahiye.-->
+            <img src="html.png"> 
+            <h1 class="first">HTML5</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque deleniti ea vitae id incidunt quam velit nostrum reiciendis quibusdam harum.</p>
+        </div>
+        <div class="container">  <!--div ki jagah section bhi use kr skte the image ke liye.-->
+            <img src="css.png">
+            <h1 class="second">CSS3</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio aperiam consequatur labore. A fuga, laboriosam porro tenetur voluptas magni repellat!
+            </p>
+        </div>
+        <div class="container"> 
+            <img src="icon.png">
+            <h1 id="third">JavaScript</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias repellendus totam praesentium vero hic harum cupiditate, odio fugit suscipit quo.</p>
+        </div>
+    </article>
+
+    <!--ARTICLE MODULE FINISHED.-->
+
+    <footer>
+        <h1>&copy; PEPCODING 2K22.</h1> <!-- &copy;is used to add copyright symbol.-->
+    </footer>
+</body>
+</html>

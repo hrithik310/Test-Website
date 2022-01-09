@@ -1,0 +1,162 @@
+/*Default Styling : mtlb jese hum style tag me likhte the.*/
+
+html{ /*yeh html likhne se yeh hua ki html file jisko link kra hai uske html tag ke
+        under jitna bhi content ko jo below styling hai vo allot hojayegi, html ki 
+        jagah body likhta to saare body ke content ko below styling allot hojati.*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /*isse yeh hoga ki jab javaScript pe click krenge to ek dum se section pe direct nahi 
+    kar dega smoothly jayega.*/
+}
+
+header h1{/*isko header>h1 bhi likh sakte the same hi baat padti.*/ 
+    font-weight: 400;
+}
+
+header{
+    display:flex; /*header me alag alag type ki display properties hoti hai, like flex,
+                flex yeh krta hai ki jese ab header me jo direct children honge header ke
+                unko alag alag line dene ke bajaye agr pehle element ke place hone ke bad,
+                jagah hogi to ussi line me next element ko bhi place krdega, like dev 101
+                ke aage hi list print krdega.*/
+   /* justify-content: flex-end; /*ab hoga kya , jese flex se hota yeh hai ki ab header ka 
+                                ek upr full horizontal space flex ban gaya vo block pura,
+                                to flex-end ka mtlb kya hua vo dev 101 and list ko pura
+                                last me mtlb top-right me le jayega.*/
+
+
+    /*HOTA YEH HAI KI JESE DISPLAY HAI AND JUSTIFY-CONTENT HAI ISKE ANDAR HUNDREDS OF OPTIONS
+    HOTE HAI JO PROPERTY KA NAAM NAA THODA SIMILAR HOTA HAI LITERAL MEANING SE TO HIT AND TRIAL
+    KRO AND FIR JONSI SET BETHE STYLING VO LAGALO. JESE AB 1ST_PROJECT KE LIYE MERKO 
+    JUSTIFY-CONTENT KI PROPERTY SPACE-BETWEEN SAHI BETHI.*/
+
+    justify-content: space-between;
+
+    margin: 0rem 2rem 0rem 4rem ; /*rem is unit just like px, and 1rem is equal to the space of 1 letter
+                        of that particular font size. mtlb like heading ka size 20 hai,
+                        to heading me jitna space ek letter lega utna space equals to 1rem*/
+                    
+                        /*jese bs 2 values di hai to isme, pehle vali top and bottom ke liye hai
+                        and dusri left and right ke liye and ab agr me isko margin: 0 10px 0
+                        ese likh deta to pehli and last value top and bottom ke liye hojati 
+                        and dusri left and right ke liye and margin: 1px 1px 1px 1px ese likh do 
+                        to top right bottom left ese allot hojati hai.*/
+
+}
+nav{
+    position: relative; /*yeh hume allow krta hai ki hum apne block ko move kr skte hai relative to its default position.
+                            yeh likhne se koi abhi farak nahi padega site se yeh bs ab permission mil gayi hai usse move
+                            krne ki.*/
+    top: 1rem; /*yeh nav bar ko 1 rem se move krdega top se, and bina position:relative likhe yeh possible nahi hota.*/
+    right: 3rem;
+}
+
+header nav ul{
+    display:flex; /*isse puri jese item alag alag line me the ek line me hi ajayenge.
+                faltu space saara hat jayega and bs saara content ek ke bad ek ajayega.*/
+
+    /*ab yeh sb ek sath chipakke htmlcssjavascript ese ajayega kyonki nav bar flex ki vajah
+    se ho hi itna gaya hai. to thodi spacing dene ke liye hume thodi width badani padegi.*/
+    width: 23rem; /*kyonki humara ul vala box hi chotta hogya flaex ki vajah se to space-between
+                    work hi nahi krega usko kaam krvane ke liye pehle box ki width badao
+                    yaan to ul ki yaan nav ki and 
+                    uske bad space-between.*/
+    justify-content: space-between;
+
+}
+
+header nav ul>li{
+    list-style: none; /*isse bulletins hat jayenge.*/
+    font-size: 1.5rem; /*agr abhi vala size hai to humne kra ki 1.5x krdo bs, yeh hota hai rem ka mtlb size me*/
+}
+
+header nav ul>li>a{
+    color: black;
+    text-decoration: none; /*used to remove underline*/
+}
+
+
+/*HOVER EFFECT :-  jab bhi us content pe mouse yaan cursor leke jayenge to usme alag properties showcase hongi jo humne
+likhi hongi, to ek tareeke se hover bhi khudme ek property hi hui to yeh properties like hover hume css deta hai, or 
+kehte hai psuedo class, and to access the psuedo class hume jis bhi tag pe use krni hai uska nam and : fir jonsi psuedo
+class chahiye vo. below example is for a tag*/
+
+a:hover{
+    color: red;
+    /*font-size: 2rem;  : isse kya hoga ki jab bhi cursor vahan pe leke jayenge uska size bada hojayega*/
+    /*basically psuedo classes are used to give effects to the content of a particular tag, like hover there are many
+        psuedo classes, and what do you want to do in that effect you can define inside it.*/
+}
+
+/*HEADER STYLING DONE.*/
+
+/*1ST IMAGE STYLING.*/
+
+.laptop_image{
+    width: 92vw;
+    margin:1rem;
+    height: 40rem;
+    position: relative;
+    left: 1rem;
+}
+
+/*ARTICLE STYLING JAHAN CONTENT LIKHA HUA HAI.*/
+
+article{
+    display: flex;
+    /*margin: 2rem 0rem 2rem 10rem;
+    width: 70rem;*/
+    /*justify-content: space-between; /*iski jagah me container ko margin bhi de skta tha right se, to vo sbhi 2 rem se
+                                    separate hojate.*/
+}
+
+ article>.container{
+    /*width: 20vw;*/
+    text-align: center;/*jo kaam niche yeh itna sab commented ka raha tha, vo sb yeh text align ne krdiya , positioning
+                        ki need hi nahi padi isne container me jo bhi tha sb kuch center me le aya.*/
+    margin-left: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+
+ }
+
+ /*.first{
+     position: relative;
+     left: 1.5rem;
+ }
+
+ .second{
+     position: relative;
+     left: 2rem;
+ }
+
+ .third{
+     position: relative;
+     left: .2rem;
+ }
+
+ .container>p{
+     font-size: 1.5rem;
+     width: 20rem;
+     /*height: 10rem;
+     position: relative;
+     right: 4rem;
+ }*/
+
+ /*FOOTER STYLING*/
+
+ footer{
+     border: 1px solid;
+     margin: 10px 10px 10px 10px;
+     background-color: black;
+     width: 96vw;
+ }
+ footer h1{
+     color: aliceblue;
+     /*position: relative;
+     left: 30rem; /*yeh krne se kya hoga ki vo right me shift hoga to right me bhi space chala jayega isse badiya 
+                    display flex krke justify content : center krdo.*/
+     display: flex;
+     justify-content: center;/*it is only applicable on the content inside flex container, so display flex is necessary 
+                                to use justify content.*/
+     font-weight: 400;
+ }
